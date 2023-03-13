@@ -14,7 +14,8 @@ module.exports = {
       'khaki': '#F6E288',
       'maximum-blue-green': '#2EC4B6',
       'alizarin-crimson': '#E71D36',
-      'maastricht-blue': '#E71D36',
+      'maastricht-blue': '#011627',
+      'white': '#FFFFFF',
     },
     extend: {
     },
