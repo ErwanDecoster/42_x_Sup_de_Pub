@@ -16,6 +16,7 @@ module.exports = {
       'alizarin-crimson': '#E71D36',
       'maastricht-blue': '#011627',
       'white': '#FFFFFF',
+      'black': '#000000',
     },
     extend: {
     },
