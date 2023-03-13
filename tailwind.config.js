@@ -19,6 +19,9 @@ module.exports = {
       'black': '#000000',
     },
     extend: {
+      fontSize: {
+        '10xl': '156px',
+      }
     },
   },
   plugins: [],
