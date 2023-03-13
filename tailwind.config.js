@@ -11,7 +11,10 @@ module.exports = {
   ],
   theme: {
     colors: {
-      'almond': '#EEDECC',
+      'khaki': '#F6E288',
+      'maximum-blue-green': '#2EC4B6',
+      'alizarin-crimson': '#E71D36',
+      'maastricht-blue': '#E71D36',
     },
     extend: {
     },
