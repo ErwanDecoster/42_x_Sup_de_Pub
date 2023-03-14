@@ -2,19 +2,19 @@
   <div>
     <section class="background w-full h-[95vh] flex justify-center items-center">
       <img
-        class="h-3/5 absolute -right-0 -translate-y-80 z-0"
+        class="h-[40rem] -top-44 -right-0 absolute  z-0"
         src="../public/halfcirclegreen+dot.svg"
         alt=""
       >
-      <!-- <img
-        class=""
-        src="../public"
+      <img
+        class="absolute -top-64 left-14 z-0 h-[50rem] opacity-20"
+        src="../public/whitesnake.svg"
         alt=""
-      > -->
+      >
       <div class="z-10">
         <div class="custom-shadow h-0 w-0 rounded-full bg-maastricht-blue absolute top-1/2 left-1/2 -z-10" />
         <h1 class="text-white text-8xl relative -translate-y-1/2">
-          EDITION
+			ÉDITION
           <span class="text-khaki text-10xl font-bold absolute left-1/2 -translate-x-1/2 top-14">2023</span>
         </h1>
         <div class="flex flex-col items-center gap-8 mt-20">
