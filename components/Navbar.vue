@@ -1,5 +1,5 @@
 <template>
-  <div 
+  <div
     id="navbar"
     data-scroll="0"
     class="duration-200 fixed z-20 h-32 w-full flex py-6"

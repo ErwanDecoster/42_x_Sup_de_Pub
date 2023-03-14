@@ -7,7 +7,7 @@ html {
   @apply bg-maastricht-blue;
 }
 *::-webkit-scrollbar {
-  height: 6px; 
+  height: 6px;
   width: 6px;
 }
 
@@ -33,11 +33,11 @@ html {
   .button-primary {
     @apply bg-khaki text-maastricht-blue rounded-full text-sm px-5 py-2 border-2 border-khaki font-medium uppercase cursor-pointer block w-fit duration-150 hover:bg-transparent hover:text-khaki
   }
-  
+
   .button-primary-two {
     @apply bg-maximum-blue-green text-maastricht-blue rounded-full text-sm px-5 py-2 border-2 border-maximum-blue-green font-medium uppercase cursor-pointer block w-fit duration-150 hover:bg-transparent hover:text-maximum-blue-green
   }
-  
+
   .button-secondary {
     @apply text-white rounded-full text-sm px-5 py-2 border-2 border-white font-medium uppercase cursor-pointer block w-fit duration-150 hover:bg-white hover:text-maastricht-blue
   }
@@ -50,3 +50,4 @@ html {
     @apply bg-maximum-blue-green text-maastricht-blue rounded-full text-sm px-5 py-2 border-2 border-maastricht-blue font-medium uppercase cursor-pointer block w-fit duration-150 hover:text-white hover:bg-maastricht-blue hover:border-maximum-blue-green
   }
 }
+
