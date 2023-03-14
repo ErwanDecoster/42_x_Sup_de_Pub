@@ -33,7 +33,7 @@
         </NuxtLink>
         <NuxtLink
           to=""
-          class="button-primary-two px-2"
+          class="button-primary-two px-2 hover:bg-maximum-blue-green"
         >
           <img
             class="h-5 w-6"
