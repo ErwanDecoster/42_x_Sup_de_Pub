@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="relative flex bg-black w-full pb-52">
-      <div class="flex flex-col m-auto lg:flex-row justify-between gap-10 max-w-screen-2xl w-full py-12 px-6">
+      <div class="flex flex-wrap flex-col m-auto lg:flex-row justify-between gap-10 max-w-screen-2xl w-full py-12 px-6">
         <div class="flex flex-col h-40 justify-between">
           <p class="whitespace-nowrap text-white font-bold text-2xl">
             LES NUITS DE FOURVIÈRE
@@ -35,9 +35,51 @@
           </p>
         </div>
         <div>
-          <p class="whitespace-nowrap text-white font-bold text-2xl">
+          <p class="whitespace-nowrap text-white font-bold text-2xl mb-5">
             RÉSEAUX SOCIAUX
           </p>
+          <div class="flex gap-6">
+            <NuxtLink
+              to=""
+              class="border-4 border-khaki rounded-full px-2 py-2 cursor-pointer"
+            >
+              <img
+                class="h-5 w-6 min-w-[24px] min-h-[20px]"
+                src="@/public/icone_facebook.svg"
+                alt=""
+              >
+            </NuxtLink>
+            <NuxtLink
+              to=""
+              class="border-4 border-khaki rounded-full px-2 py-2 cursor-pointer"
+            >
+              <img
+                class="h-5 w-6 min-w-[24px] min-h-[20px]"
+                src="@/public/icone_twitter.svg"
+                alt=""
+              >
+            </NuxtLink>
+            <NuxtLink
+              to=""
+              class="border-4 border-khaki rounded-full px-2 py-2 cursor-pointer"
+            >
+              <img
+                class="h-5 w-6 min-w-[24px] min-h-[20px]"
+                src="@/public/icone_instagram.svg"
+                alt=""
+              >
+            </NuxtLink>
+            <NuxtLink
+              to=""
+              class="border-4 border-khaki rounded-full px-2 py-2 cursor-pointer"
+            >
+              <img
+                class="h-5 w-6 min-w-[24px] min-h-[20px]"
+                src="@/public/icone_youtube.svg"
+                alt=""
+              >
+            </NuxtLink>
+          </div>
         </div>
         <div>
           <p class="whitespace-nowrap text-white font-bold text-2xl mb-5">
@@ -88,7 +130,7 @@
             <div class="flex flex-row">
               <input 
                 type="text" 
-                class="px-5 py-2 text-white bg-black border-2 border-white rounded-full" 
+                class="px-5 py-2 text-white bg-black border-2 border-white rounded-full outline-none" 
               >
               <p class="button-primary -ml-10">
                 S'ABONNER
