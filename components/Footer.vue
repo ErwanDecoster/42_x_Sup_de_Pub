@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="relative flex bg-black w-full pb-52">
-      <div class="flex flex-wrap flex-col m-auto lg:flex-row justify-between gap-10 max-w-screen-2xl w-full py-12 px-6">
+      <div class="grid m-auto md:grid-cols-2 sm:grid-cols-1 xl:grid-cols-4 justify-between gap-8 max-w-screen-2xl w-full py-12 px-6">
         <div class="flex flex-col h-40 justify-between">
           <p class="whitespace-nowrap text-white font-bold text-2xl">
             LES NUITS DE FOURVIÈRE
@@ -124,7 +124,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
           <div>
-            <p class="text-white text-base">
+            <p class="text-white text-base pb-2">
               Adresse email
             </p>
             <div class="flex flex-row">
