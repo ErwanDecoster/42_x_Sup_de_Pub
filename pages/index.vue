@@ -3,7 +3,7 @@
     <section class="background w-full h-[95vh] flex justify-center items-center">
       <img 
         class="h-2/5 absolute -right-20 -top-2 -rotate-90" 
-        src="@/public/halfcircle.svg" 
+        src="@/src/halfcircle.svg" 
         alt=""
       >
       <div class="z-10">
@@ -38,7 +38,7 @@
 <style>
   .background
   {
-    background-image: url('@/public/background.png');
+    background-image: url('@/src/background.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

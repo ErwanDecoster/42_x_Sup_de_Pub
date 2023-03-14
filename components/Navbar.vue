@@ -1,12 +1,16 @@
 <template>
-  <div class="fixed z-20 h-32 w-full flex">
-    <div class="flex justify-between max-w-screen-xl m-auto w-full">
+  <div 
+    id="navbar"
+    data-scroll="0"
+    class="duration-200 fixed z-20 h-32 w-full flex py-6"
+  >
+    <div class="justify-between max-w-screen-xl m-auto w-full hidden lg:flex px-6">
       <img
-        class="h-16"
-        src="@/public/logo.svg"
+        class="h-full"
+        src="@/src/logo.svg"
         alt=""
       >
-      <div class="flex gap-12 items-center ">
+      <div class="flex gap-4 xl:gap-12 items-center ">
         <NuxtLink
           to=""
           class="button-simple "
@@ -41,3 +45,30 @@
     </div>
   </div>
 </template>
+
+
+
+<script>
+export default {
+  data() {
+    return {
+      fullNavOpen: false,
+    };
+  },
+  mounted() {
+    document.documentElement.dataset.scroll = window.scrollY;
+    window.addEventListener('scroll', () => {
+      document.documentElement.dataset.scroll = window.scrollY;
+    });
+  }
+};
+</script>
+
+<style>
+html:not([data-scroll='0']) #navbar {
+  background: #011627;
+  padding-top: 8px;
+  padding-bottom: 8spx;
+  height: 96px;
+}
+</style>
