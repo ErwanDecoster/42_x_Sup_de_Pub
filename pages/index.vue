@@ -7,8 +7,13 @@
         alt=""
       >
       <img
-        class="h-[60rem] absolute -top-80 left-0 opacity-20"
+        class="h-[60rem] absolute -top-80 -left-8 opacity-20"
         src="@/src/whitesnake.svg"
+        alt=""
+      >
+      <img
+        class="h-[30rem] bottom-14 left-0 absolute"
+        src="@/src/logo_square.svg"
         alt=""
       >
       <div class="z-10">
@@ -37,6 +42,22 @@
           </div>
         </div>
       </div>
+    </section>
+    <section class="bg-maastricht-blue w-full h-[80vh] relative">
+      <div class="mx-auto max-w-screen-xl">
+        <div>
+          // caoucel
+        </div>
+        <div>
+          <h2 class="text-white text-5xl static left-3/4 top-1/2">
+            UN INIMITABLE
+            <span class="text-khaki text-7xl relative -left-1 -top-4 font-bold">FESTIVAL</span>
+          </h2>
+          <p></p>
+          <NuxtLink class=""></NuxtLink>
+        </div>
+      </div>
+
     </section>
   </div>
 </template>
