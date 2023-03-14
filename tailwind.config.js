@@ -22,8 +22,8 @@ module.exports = {
     extend: {
       fontSize: {
         '10xl': '156px',
-      }
     },
   },
   plugins: [],
+  }
 }
