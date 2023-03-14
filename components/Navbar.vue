@@ -2,9 +2,9 @@
   <div
     id="navbar"
     data-scroll="0"
-    class="duration-200 fixed z-20 h-32 w-full flex py-6"
+    class="duration-200 fixed z-20 h-32 w-full hidden lg:flex py-3"
   >
-    <div class="justify-between max-w-screen-xl m-auto w-full hidden lg:flex px-6">
+    <div class="justify-between max-w-screen-xl m-auto w-full flex px-6">
       <img
         class="h-full"
         src="@/src/logo.svg"
@@ -12,10 +12,10 @@
       >
       <div class="flex gap-4 xl:gap-12 items-center ">
         <NuxtLink
-          to=""
+          to="/about_us"
           class="button-simple "
         >
-          QUI SOMMES NOUS?
+          QUI SOMMES-NOUS ?
         </NuxtLink>
         <NuxtLink
           to=""
@@ -25,15 +25,9 @@
         </NuxtLink>
         <NuxtLink
           to=""
-          class="button-simple "
-        >
-          PROGRAMMATION
-        </NuxtLink>
-        <NuxtLink
-          to=""
           class="button-primary"
         >
-          BILLETERIE
+          PROGRAMMATION & BILLETTERIE
         </NuxtLink>
         <NuxtLink
           to=""
