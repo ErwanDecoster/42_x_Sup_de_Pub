@@ -1,7 +1,11 @@
 <template>
   <div>
     <section class="background w-full h-[95vh] flex justify-center items-center">
-      <img class="h-2/5 absolute -right-20 -top-2 -rotate-90" src="../public/halfcircle.svg" alt="">
+      <img 
+        class="h-2/5 absolute -right-20 -top-2 -rotate-90" 
+        src="@/public/halfcircle.svg" 
+        alt=""
+      >
       <div class="z-10">
         <div class="custom-shadow h-0 w-0 rounded-full bg-maastricht-blue absolute top-1/2 left-1/2 -z-10" />
         <h1 class="text-white text-8xl relative -translate-y-1/2">
@@ -10,11 +14,21 @@
         </h1>
         <div class="flex flex-col items-center gap-8 mt-20">
           <p class="text-white">
-           Du <b>31.05</b> au <b>28.07</b>
+            Du <b>31.05</b> au <b>28.07</b>
           </p>
           <div class="flex gap-5">
-            <NuxtLink to="" class="button-secondary">Programmation</NuxtLink>
-            <NuxtLink to="" class="button-primary-two">Billeterie</NuxtLink>
+            <NuxtLink 
+              to="" 
+              class="button-secondary"
+            >
+              Programmation
+            </NuxtLink>
+            <NuxtLink 
+              to="" 
+              class="button-primary-two"
+            >
+              Billeterie
+            </NuxtLink>
           </div>
         </div>
       </div>

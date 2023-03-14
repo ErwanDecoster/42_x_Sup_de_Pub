@@ -86,7 +86,10 @@
               Adresse email
             </p>
             <div class="flex flex-row">
-              <input type="text" class="px-5 py-2 text-white bg-black border-2 border-white rounded-full"/>
+              <input 
+                type="text" 
+                class="px-5 py-2 text-white bg-black border-2 border-white rounded-full" 
+              >
               <p class="button-primary -ml-10">
                 S'ABONNER
               </p>
@@ -96,7 +99,7 @@
       </div>
       <img
         class="absolute h-64 bottom-0 left-0"
-        src="@/public/logoSquare.svg"
+        src="@/public/logo_square.svg"
         alt=""
       >
     </div>
