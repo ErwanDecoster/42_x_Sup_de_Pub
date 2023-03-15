@@ -31,9 +31,13 @@
         </NuxtLink>
         <NuxtLink
           to=""
-          class="button-primary-two "
+          class="button-primary-two px-2 hover:bg-maximum-blue-green"
         >
-          pannier
+          <img
+            class="h-5 w-6"
+            src="@/public/icone_panier_noir.svg"
+            alt=""
+          >
         </NuxtLink>
       </div>
     </div>
