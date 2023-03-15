@@ -141,7 +141,7 @@
       </div>
       <img
         class="absolute h-64 bottom-0 left-0"
-        src="@/public/logo_square.svg"
+        src="@/src/logo_square.svg"
         alt=""
       >
     </div>

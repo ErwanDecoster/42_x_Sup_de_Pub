@@ -17,12 +17,13 @@ module.exports = {
       'maastricht-blue': '#011627',
       'white': '#FFFFFF',
       'black': '#000000',
+      'transparent': 'transparent',
     },
     extend: {
       fontSize: {
         '10xl': '156px',
-      }
     },
   },
   plugins: [],
+  }
 }

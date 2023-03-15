@@ -1,4 +1,3 @@
-
 <template>
   <div>
     <section class="background w-full h-[95vh]">
