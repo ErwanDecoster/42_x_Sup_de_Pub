@@ -7,7 +7,7 @@
         alt=""
       >
       <img
-        class="h-[60rem] absolute -top-80 -left-8 opacity-20"
+        class="h-[60rem] absolute -top-80 -left-36 opacity-20"
         src="@/src/whitesnake.svg"
         alt=""
       >
@@ -43,21 +43,26 @@
         </div>
       </div>
     </section>
-    <section class="bg-maastricht-blue w-full h-[80vh] relative">
-      <div class="mx-auto max-w-screen-xl">
-        <div>
-          // caoucel
+    <section class="bg-maastricht-blue w-full h-[80vh] flex justify-center items-center">
+      <div class="max-w-screen-xl grid grid-cols-5 gap-52">
+        <div class="col-span-3">
+          <carrousel />
         </div>
-        <div>
-          <h2 class="text-white text-5xl static left-3/4 top-1/2">
+        <div class="col-span-2">
+          <h2 class="text-white text-5xl ">
             UN INIMITABLE
-            <span class="text-khaki text-7xl relative -left-1 -top-4 font-bold">FESTIVAL</span>
+            <span class="text-khaki text-7xl relative -top-5 -left-1 font-bold">FESTIVAL</span>
           </h2>
-          <p></p>
-          <NuxtLink class=""></NuxtLink>
+          <p class="text-white mt-5 mb-5">
+            Les Nuits de Fourvière sont un <bold>festival culturel pluridisciplinaire</bold> (théâtre, musique, danse, cinéma...)
+            se déroulant chaque été (en juin, juillet et août) depuis 1946 au Théâtre antique de Fourvière
+            (de 2 600 à 4 500 places), dans le 5e arrondissement de Lyon, près de la basilique du même nom.
+          </p>
+          <NuxtLink class="button-primary relative -left-1">
+            QUI SOMMES NOUS ?
+          </NuxtLink>
         </div>
       </div>
-
     </section>
   </div>
 </template>
