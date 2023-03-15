@@ -1,6 +1,6 @@
 <template>
   <div>
-    <section class="background w-full h-[95vh] flex justify-center items-center">
+    <section class="background w-full h-[100vh] flex justify-center items-center">
       <img
         class="h-[43rem] absolute -right-0 -top-32"
         src="@/src/halfcirclegreen+dot.svg"
@@ -12,8 +12,8 @@
         alt=""
       >
       <img
-        class="h-[30rem] bottom-14 left-0 absolute"
-        src="@/src/logo_square.svg"
+        class="h-[50rem] -bottom-[19rem] left-0 absolute"
+        src="@/src/demi-cercle-jaune-logo.svg"
         alt=""
       >
       <div class="z-10">
