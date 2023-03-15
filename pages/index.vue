@@ -46,7 +46,7 @@
     <section class="bg-maastricht-blue w-full h-[80vh] flex justify-center items-center">
       <div class="max-w-screen-xl grid grid-cols-5 gap-52">
         <div class="col-span-3">
-          <carrousel />
+          <Carrousel />
         </div>
         <div class="col-span-2">
           <h2 class="text-white text-5xl ">
@@ -63,6 +63,18 @@
           </NuxtLink>
         </div>
       </div>
+      <div>
+        <img
+          class="absolute rotate-180 right-[6rem] -bottom-[67em]"
+          src="@/src/outline_circle.svg"
+          alt=""
+        >
+      </div>
+      <img
+        class="absolute w-32 rotate-180 right-[2rem] -bottom-[58em] opacity-95"
+        src="@/src/circle.svg"
+        alt=""
+      >
     </section>
   </div>
 </template>
