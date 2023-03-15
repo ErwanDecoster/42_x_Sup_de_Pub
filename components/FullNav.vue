@@ -5,7 +5,7 @@
   >
     <div class="h-32 w-full flex py-6">
       <div class="justify-between max-w-screen-xl m-auto w-full flex px-6">
-        <NuxtLink>
+        <NuxtLink to="/">
           <img
             class="h-full"
             src="@/src/logo.svg"
@@ -33,7 +33,7 @@
             </svg>
           </NuxtLink>
           <NuxtLink
-            to=""
+            to="/basket"
             class="h-11 w-11 text-maastricht-blue rounded-full text-sm px-5 py-2 border-2 border-maximum-blue-green font-medium uppercase cursor-pointer duration-150 group hover:bg-maximum-blue-green flex justify-center flex-col items-center"
             :class="`${ visibility ? 'hidden' : 'flex'}`"
           >
@@ -110,7 +110,7 @@
         PROGRAMMATION & BILLETTERIE
       </NuxtLink>
       <NuxtLink
-        to=""
+        to="/basket"
         class="button-secondary delay-500"
         :class="`${ visibility ? 'opacity-100' : 'opacity-0'}`"
         @click="visibility = false"
