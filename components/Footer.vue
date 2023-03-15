@@ -15,7 +15,7 @@
         </p>
         <NuxtLink
           to=""
-          class="button-bg-secondary "
+          class="button-bg-secondary"
         >
           ACCÉDER À LA BILLETTERIE
         </NuxtLink>
@@ -45,7 +45,7 @@
             >
               <img
                 class="h-5 w-6 min-w-[24px] min-h-[20px]"
-                src="@/public/icone_facebook.svg"
+                src="@/src/icone_facebook.svg"
                 alt=""
               >
             </NuxtLink>
@@ -55,7 +55,7 @@
             >
               <img
                 class="h-5 w-6 min-w-[24px] min-h-[20px]"
-                src="@/public/icone_twitter.svg"
+                src="@/src/icone_twitter.svg"
                 alt=""
               >
             </NuxtLink>
@@ -65,7 +65,7 @@
             >
               <img
                 class="h-5 w-6 min-w-[24px] min-h-[20px]"
-                src="@/public/icone_instagram.svg"
+                src="@/src/icone_instagram.svg"
                 alt=""
               >
             </NuxtLink>
@@ -75,7 +75,7 @@
             >
               <img
                 class="h-5 w-6 min-w-[24px] min-h-[20px]"
-                src="@/public/icone_youtube.svg"
+                src="@/src/icone_youtube.svg"
                 alt=""
               >
             </NuxtLink>
@@ -130,9 +130,9 @@
             <div class="flex flex-row">
               <input 
                 type="text" 
-                class="px-5 py-2 text-white bg-black border-2 border-white rounded-full outline-none" 
+                class="px-5 py-2 pr-7 text-white bg-black border-2 border-white rounded-l-full outline-none" 
               >
-              <p class="button-primary -ml-10">
+              <p class="button-primary -ml-5 hover:bg-black">
                 S'ABONNER
               </p>
             </div>

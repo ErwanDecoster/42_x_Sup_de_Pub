@@ -35,7 +35,7 @@
         >
           <img
             class="h-5 w-6"
-            src="@/public/icone_panier_noir.svg"
+            src="@/src/icone_panier_noir.svg"
             alt=""
           >
         </NuxtLink>

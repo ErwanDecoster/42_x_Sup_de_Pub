@@ -66,7 +66,7 @@
         <div class="flex flex-col gap-6 xl:order-1 xl:col-span-3">
           <img 
             class="w-auto md:max-w-4xl"
-            src="@/public/724_Altin_Gun_ Joao_Selva_web_paul 1.png"
+            src="@/src/image_1.png"
             alt=""
           >
           <p class="text-white text-base font-normal italic">
@@ -115,7 +115,7 @@
         <div class="flex flex-col gap-6 xl:order-1 xl:col-span-3">
           <img 
             class="w-auto md:max-w-4xl"
-            src="@/public/NDF_ouverture_Camille_web_paul 1.png" 
+            src="@/src/image_2.png" 
             alt=""
           >
           <p class="text-white text-base font-normal italic">
@@ -153,7 +153,7 @@
         <div class="flex flex-col gap-6 xl:col-span-3">
           <img 
             class="w-auto md:max-w-4xl"
-            src="@/public/10061f000001gqumo0322 1.png" 
+            src="@/src/image_3.png" 
             alt=""
           >
           <p class="text-white text-base font-normal italic">
