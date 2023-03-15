@@ -54,7 +54,7 @@
             <span class="text-khaki text-7xl relative -top-5 -left-1 font-bold">FESTIVAL</span>
           </h2>
           <p class="text-white mt-5 mb-5">
-            Les Nuits de Fourvière sont un <bold>festival culturel pluridisciplinaire</bold> (théâtre, musique, danse, cinéma...)
+            Les Nuits de Fourvière sont un <b>festival culturel pluridisciplinaire</b> (théâtre, musique, danse, cinéma...)
             se déroulant chaque été (en juin, juillet et août) depuis 1946 au Théâtre antique de Fourvière
             (de 2 600 à 4 500 places), dans le 5e arrondissement de Lyon, près de la basilique du même nom.
           </p>
