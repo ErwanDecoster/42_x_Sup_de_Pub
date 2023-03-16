@@ -20,7 +20,7 @@
           QUI SOMMES-NOUS ?
         </NuxtLink>
         <NuxtLink
-          to=""
+          to="/infos"
           class="button-simple "
         >
           INFOS PRATIQUES
