@@ -2,53 +2,47 @@
   <div>
     <section class="background w-full h-[100vh] flex justify-center items-center">
       <img
-        class="h-[43rem] absolute -right-0 -top-32"
+        class="absolute h-0 top-[6.75rem] right-[0.75rem] md:h-[43rem] md:-right-0 md:-top-32"
         src="@/src/halfcirclegreen+dot.svg"
         alt=""
       >
       <img
-        class="h-[60rem] absolute -top-80 -left-36 opacity-20"
+        class="md:h-[60rem] absolute -top-80 -left-36 opacity-20"
         src="@/src/whitesnake.svg"
         alt=""
       >
       <img
-        class="h-[50rem] -bottom-[19rem] left-0 absolute"
+        class="h-44 -bottom-16 md:h-[50rem] absolute md:-bottom-[19rem] left-0"
         src="@/src/demi-cercle-jaune-logo.svg"
         alt=""
       >
       <div class="z-10">
         <div class="custom-shadow h-0 w-0 rounded-full bg-maastricht-blue absolute top-1/2 left-1/2 -z-10" />
-        <h1 class="text-white text-8xl relative -translate-y-1/2">
+        <h1 class="text-white text-5xl md:text-8xl flex flex-col items-center">
           ÉDITION
-          <span class="text-khaki text-10xl font-bold absolute left-1/2 -translate-x-1/2 top-14">2023</span>
+          <span class="text-khaki text-7xl font-bold relative -top-6 md:text-10xl md:-top-11">2023</span>
         </h1>
-        <div class="flex flex-col items-center gap-8 mt-20">
+        <div class="flex flex-col items-center gap-6 md:-mt-6 md:text-2xl">
           <p class="text-white">
             Du <b>31.05</b> au <b>28.07</b>
           </p>
           <div class="flex gap-5">
             <NuxtLink
               to=""
-              class="button-secondary"
-            >
-              Programmation
-            </NuxtLink>
-            <NuxtLink
-              to=""
               class="button-primary-two"
             >
-              Billeterie
+              PROGRAMMATION & BILLETERIE
             </NuxtLink>
           </div>
         </div>
       </div>
     </section>
-    <section class="bg-maastricht-blue w-full h-[80vh] flex justify-center items-center">
-      <div class="max-w-screen-xl grid grid-cols-5 gap-52">
-        <div class="col-span-3">
+    <section class="bg-maastricht-blue w-full h-[80vh] md:flex md:justify-center md:items-center">
+      <div class="max-w-screen-xl flex-col md:grid md:grid-cols-5 md:gap-52">
+        <div class="order-7 md:order-first md:col-span-3">
           <Carrousel />
         </div>
-        <div class="col-span-2">
+        <div class="order-2 md:col-span-2">
           <h2 class="text-white text-5xl ">
             UN INIMITABLE
             <span class="text-khaki text-7xl relative -top-5 -left-1 font-bold">FESTIVAL</span>
