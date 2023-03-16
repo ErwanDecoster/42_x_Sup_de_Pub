@@ -37,38 +37,98 @@
         </div>
       </div>
     </section>
-    <section class="bg-maastricht-blue w-full h-[80vh] md:flex md:justify-center md:items-center">
-      <div class="max-w-screen-xl flex-col md:grid md:grid-cols-5 md:gap-52">
-        <div class="order-7 md:order-first md:col-span-3">
+    <section class="bg-maastricht-blue w-full p-8 md:h-[80vh] md:flex md:justify-center md:items-center">
+      <div class="max-w-screen-xl grid gap-16 md:grid-cols-5 md:gap-52">
+        <div class="order-last mb-16 md:order-first md:col-span-3">
           <Carrousel />
         </div>
-        <div class="order-2 md:col-span-2">
-          <h2 class="text-white text-5xl ">
+        <div class="z-50order-first mt-3 md:col-span-2">
+          <h2 class="text-white text-3xl mb-4 md:text-5xl ">
             UN INIMITABLE
-            <span class="text-khaki text-7xl relative -top-5 -left-1 font-bold">FESTIVAL</span>
+            <span class="text-khaki text-5xl md:text-7xl relative -top-4 md:-top-6 -left-1 font-bold">FESTIVAL</span>
           </h2>
-          <p class="text-white mt-5 mb-5">
+          <p class="text-white md:mt-5 mb-5">
             Les Nuits de Fourvière sont un <b>festival culturel pluridisciplinaire</b> (théâtre, musique, danse, cinéma...)
-            se déroulant chaque été (en juin, juillet et août) depuis 1946 au Théâtre antique de Fourvière
-            (de 2 600 à 4 500 places), dans le 5e arrondissement de Lyon, près de la basilique du même nom.
+            se déroulant <b>chaque été</b> (en juin, juillet et août) <b>depuis 1946</b> au <b>Théâtre antique de Fourvière</b>
+            (de 2 600 à 4 500 places), dans le <b>5e arrondissement de Lyon</b>, près de la basilique du même nom.
           </p>
-          <NuxtLink class="button-primary relative -left-1">
+          <NuxtLink class="button-primary-two md:button-primary relative -left-1">
             QUI SOMMES NOUS ?
           </NuxtLink>
         </div>
       </div>
       <div>
         <img
-          class="absolute rotate-180 right-[6rem] -bottom-[67em]"
+          class="h-0 absolute md:rotate-180 md:right-[6rem] md:-bottom-[67em]"
           src="@/src/outline_circle.svg"
           alt=""
         >
       </div>
       <img
-        class="absolute w-32 rotate-180 right-[2rem] -bottom-[58em] opacity-95"
+        class="h-0 absolute md:w-32 md:rotate-180 md:right-[2rem] md:-bottom-[58em] opacity-95"
         src="@/src/circle.svg"
         alt=""
       >
+    </section>
+    <section class="bg-[#1a2d3d] w-full p-20 md:flex md:flex-col md:justify-center md:items-center">
+      <div class=" md:grid md:grid-cols-2 align-middle">
+        <h2 class="text-white text-3xl mb-4 md:text-5xl md:col-span-1">
+          DE NOMBREUX
+          <span class="text-khaki text-5xl relative -left-1 font-bold -top-4 md:text-7xl md:flex md:-left-1 md:-top-6">ARTISTES</span>
+        </h2>
+        <p class="text-white mb-5 md:col-span-1 w-2/3">
+          Depuis plus de 75 ans, le festival produit et crée des spectacles originaux et audacieux...
+        </p>
+        <NuxtLink class="md:right-0 md:absolute md:button-primary button-primary-two">
+          TOUTE LA PROGRAMMATION
+        </NuxtLink>
+      </div>
+      <div class="py-10 flex flex-row gap-6 overflow-x-auto overflow-y-auto snap-mandatory snap-x md:grid md:grid-cols-4 md:gap-8">
+        <div class="snap-center my-6">
+          <Artist
+            name="FLORENCE FORESTI"
+            img="florence.jpeg"
+            theme="HUMOUR"
+            days="16-17"
+            month="06"
+            fontSize="22"
+            description="Elle revient avec son nouveau seule-en-scène intitulé Boys..."
+          />
+        </div>
+        <div class="snap-center my-6">
+          <Artist
+            name="FLORENCE FORESTI"
+            img="florence.jpeg"
+            theme="HUMOUR"
+            days="16-17"
+            month="06"
+            fontSize="22"
+            description="Elle revient avec son nouveau seule-en-scène intitulé Boys..."
+          />
+        </div>
+        <div class="snap-center my-6">
+          <Artist
+            name="FLORENCE FORESTI"
+            img="florence.jpeg"
+            theme="HUMOUR"
+            days="16-17"
+            month="06"
+            fontSize="22"
+            description="Elle revient avec son nouveau seule-en-scène intitulé Boys..."
+          />
+        </div>
+        <div class="snap-center my-6">
+          <Artist
+            name="FLORENCE FORESTI"
+            img="florence.jpeg"
+            theme="HUMOUR"
+            days="16-17"
+            month="06"
+            fontSize="22"
+            description="Elle revient avec son nouveau seule-en-scène intitulé Boys..."
+          />
+        </div>
+      </div>
     </section>
   </div>
 </template>

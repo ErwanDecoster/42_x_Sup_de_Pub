@@ -1,5 +1,5 @@
 <!-- exemple d'utilisation :
-<Artist 
+<Artist
   name="MICHEL POLNAREFF"
   description="Sa voix, intacte, et son sensationnel jeu de piano, font tout..."
   img="icone_twitter.svg"
@@ -12,21 +12,21 @@
 <template>
   <div class="flex flex-col gap-6 h-[530px] w-[350px] bg-">
     <div class="relative">
-      <img 
+      <img
         class="h-[350px] w-[350px]"
-        :src="'/_nuxt/public/' + img"
+        :src="'/_nuxt/src/' + img"
         alt=""
       >
-      <svg 
-        class="absolute bottom-0 left-0 h-24 w-24" 
+      <svg
+        class="absolute bottom-0 left-0 h-24 w-24"
         viewBox="0 0 100 100"
       >
-        <path 
-          d="M 0,100 L 100,100 A 100,100 0 0 0 0,0 Z" 
-          fill="#011627"
+        <path
+          d="M 0,100 L 100,100 A 100,100 0 0 0 0,0 Z"
+          fill="#1a2d3d"
         />
       </svg>
-      <p 
+      <p
         class="absolute text-white text-4xl font-bold left-0 bottom-9"
         :style="{ 'font-size': fontSize + 'px' }"
       >
@@ -50,7 +50,7 @@
 
 <script>
 export default {
-  props: { 
+  props: {
     name: {
       type: String,
       default: 'no name',
