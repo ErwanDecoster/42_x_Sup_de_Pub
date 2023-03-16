@@ -17,7 +17,7 @@
         </NuxtLink>
         <div class="flex gap-4 xl:gap-12 items-center ">
           <NuxtLink
-            to=""
+            to="/programming_and_ticketing"
             class="h-11 w-11 rounded-full text-sm px-5 py-2 border-2 border-khaki font-medium uppercase cursor-pointer duration-150 group hover:bg-khaki justify-center flex-col items-center"
             :class="`${ visibility ? 'hidden' : 'flex'}`"
           >
@@ -121,7 +121,7 @@
         INFOS PRATIQUES
       </NuxtLink>
       <NuxtLink
-        to=""
+        to="/programming_and_ticketing"
         class="button-primary"
         :class="`${ visibility ? 'opacity-100' : 'opacity-0'}`"
         @click="visibility = false"

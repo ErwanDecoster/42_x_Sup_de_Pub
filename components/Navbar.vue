@@ -26,7 +26,7 @@
           INFOS PRATIQUES
         </NuxtLink>
         <NuxtLink
-          to=""
+          to="/programming_and_ticketing"
           class="button-primary"
         >
           PROGRAMMATION & BILLETTERIE

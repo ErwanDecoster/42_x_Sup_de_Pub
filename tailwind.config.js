@@ -18,6 +18,7 @@ module.exports = {
       'white': '#FFFFFF',
       'black': '#000000',
       'platinum': '#E7E7E7',
+      'zomp': '#2EA499',
       'transparent': 'transparent',
     },
     extend: {
