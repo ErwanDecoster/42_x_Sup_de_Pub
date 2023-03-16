@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-end w-full ">
+  <div class="flex flex-col items-end w-full z-10">
     <div class="flex bg-maximum-blue-green w-full">
       <div class="flex lg:items-center flex-col m-auto lg:flex-row justify-between gap-10 max-w-screen-2xl w-full py-12 px-6">
         <div>
