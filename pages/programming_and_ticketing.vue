@@ -21,10 +21,11 @@
       </div>
     </section>
     <section class="px-6">
-      <div class="flex gap gap-6 flex-wrap py-16 mx-auto max-w-screen-2xl">
+      <div class="flex gap gap-6 flex-wrap py-6 md:py-16 mx-auto max-w-screen-2xl">
         <button 
           class="border-2 border-alizarin-crimson lg:text-2xl uppercase font-bold px-6 py-2 cursor-pointer"
           :class="`${ allFiltred ? 'bg-alizarin-crimson text-white' : 'bg-transparent text-alizarin-crimson' }`"
+          @click="AllFilterState()"
         >
           Tout
         </button>
@@ -33,7 +34,7 @@
           :key="program"
           class="border-2 border-alizarin-crimson lg:text-2xl uppercase font-bold px-6 py-2 cursor-pointer"
           :class="`${ program.filtred ? 'bg-transparent text-alizarin-crimson' : 'bg-alizarin-crimson text-white' }`"
-          @click="program.filtred = !program.filtred"
+          @click="program.filtred = !program.filtred; AllFilterStateFalse()"
         >
           {{ program.name }}
         </button>
@@ -56,59 +57,59 @@
             />
           </svg>
         </button>
-        <div class="grid grid-cols-5 gap-12 uppercase">
+        <div class="grid grid-cols-5 gap-4 lg:gap-12 uppercase">
           <div class="space-y-1">
-            <p class="text-xl">
+            <p class="text-sm truncate w-7 sm:w-auto text-clip sm:text-xl">
               Lundi
             </p>
-            <p class="text-7xl font-bold">
+            <p class="text-2xl sm:text-7xl font-bold">
               31
             </p>
-            <p class="text-xl font-bold">
+            <p class="text-sm sm:text-xl font-bold">
               MAI
             </p>
           </div>
           <div class="space-y-1">
-            <p class="text-xl">
+            <p class="text-sm truncate w-7 sm:w-auto text-clip sm:text-xl">
               Mardi
             </p>
-            <p class="text-7xl font-bold">
+            <p class="text-2xl sm:text-7xl font-bold">
               01
             </p>
-            <p class="text-xl font-bold">
+            <p class="text-sm sm:text-xl font-bold">
               JUIN
             </p>
           </div>
           <div class="space-y-1">
-            <p class="text-xl">
+            <p class="text-sm truncate w-7 sm:w-auto text-clip sm:text-xl">
               Mercredi
             </p>
-            <p class="text-7xl font-bold">
+            <p class="text-2xl sm:text-7xl font-bold">
               02
             </p>
-            <p class="text-xl font-bold">
+            <p class="text-sm sm:text-xl font-bold">
               JUIN
             </p>
           </div>
           <div class="space-y-1">
-            <p class="text-xl">
+            <p class="text-sm truncate w-7 sm:w-auto text-clip sm:text-xl">
               Jeudi
             </p>
-            <p class="text-7xl font-bold">
+            <p class="text-2xl sm:text-7xl font-bold">
               03
             </p>
-            <p class="text-xl font-bold">
+            <p class="text-sm sm:text-xl font-bold">
               JUIN
             </p>
           </div>
           <div class="space-y-1">
-            <p class="text-xl">
+            <p class="text-sm truncate w-7 sm:w-auto text-clip sm:text-xl">
               Vendredi
             </p>
-            <p class="text-7xl font-bold">
+            <p class="text-2xl sm:text-7xl font-bold">
               04
             </p>
-            <p class="text-xl font-bold">
+            <p class="text-sm sm:text-xl font-bold">
               JUIN
             </p>
           </div>
@@ -131,6 +132,14 @@
       </div>
     </section>
     <section class="">
+      <div 
+        v-if="allFiltred"
+        class="mx-auto max-w-screen-2xl text-white py-20 px-6"
+      >
+        <p class="w-full text-center text-xl">
+          Aucun résultat ne correspond à votre recherche
+        </p>
+      </div>
       <div
         v-for="program in programs"
         :key="program"
@@ -225,7 +234,7 @@
             </div>
           </div>
           <div 
-            class="absolute mt-0 z-10 right-0 inset-y-0 h-full w-20 bg-gradient-to-r from-transparent to-maastricht-blue group-odd:to-yankees-blue" 
+            class="absolute mt-0 z-10 right-0 bottom-2 w-20 h-[610px] bg-gradient-to-r from-transparent to-maastricht-blue group-odd:to-yankees-blue" 
             :class="`${ program.shows.length <= 4 ? '2xl:hidden' : 'block' }`"
           />
           <div class="flex gap-2 items-center absolute bottom-4 right-4 z-10">
@@ -243,7 +252,10 @@
                 xmlns="http://www.w3.org/2000/svg"
                 class="scale-125"
               >
-                <path d="M16.6665 9C17.2188 9 17.6665 8.55228 17.6665 8C17.6665 7.44772 17.2188 7 16.6665 7V9ZM0.626062 7.29289C0.235538 7.68342 0.235538 8.31658 0.626062 8.70711L6.99002 15.0711C7.38055 15.4616 8.01371 15.4616 8.40424 15.0711C8.79476 14.6805 8.79476 14.0474 8.40424 13.6569L2.74738 8L8.40424 2.34315C8.79476 1.95262 8.79476 1.31946 8.40424 0.928932C8.01371 0.538408 7.38055 0.538408 6.99002 0.928932L0.626062 7.29289ZM16.6665 7L1.33317 7V9H16.6665V7Z" fill="white"/>
+                <path 
+                  d="M16.6665 9C17.2188 9 17.6665 8.55228 17.6665 8C17.6665 7.44772 17.2188 7 16.6665 7V9ZM0.626062 7.29289C0.235538 7.68342 0.235538 8.31658 0.626062 8.70711L6.99002 15.0711C7.38055 15.4616 8.01371 15.4616 8.40424 15.0711C8.79476 14.6805 8.79476 14.0474 8.40424 13.6569L2.74738 8L8.40424 2.34315C8.79476 1.95262 8.79476 1.31946 8.40424 0.928932C8.01371 0.538408 7.38055 0.538408 6.99002 0.928932L0.626062 7.29289ZM16.6665 7L1.33317 7V9H16.6665V7Z" 
+                  fill="white"
+                />
               </svg>
             </button>
             <button class="w-11 h-11 border-2 border-white rounded-full flex items-center justify-center relative">
@@ -255,7 +267,10 @@
                 xmlns="http://www.w3.org/2000/svg"
                 class="scale-125 rotate-180"
               >
-                <path d="M16.6665 9C17.2188 9 17.6665 8.55228 17.6665 8C17.6665 7.44772 17.2188 7 16.6665 7V9ZM0.626062 7.29289C0.235538 7.68342 0.235538 8.31658 0.626062 8.70711L6.99002 15.0711C7.38055 15.4616 8.01371 15.4616 8.40424 15.0711C8.79476 14.6805 8.79476 14.0474 8.40424 13.6569L2.74738 8L8.40424 2.34315C8.79476 1.95262 8.79476 1.31946 8.40424 0.928932C8.01371 0.538408 7.38055 0.538408 6.99002 0.928932L0.626062 7.29289ZM16.6665 7L1.33317 7V9H16.6665V7Z" fill="white"/>
+                <path 
+                  d="M16.6665 9C17.2188 9 17.6665 8.55228 17.6665 8C17.6665 7.44772 17.2188 7 16.6665 7V9ZM0.626062 7.29289C0.235538 7.68342 0.235538 8.31658 0.626062 8.70711L6.99002 15.0711C7.38055 15.4616 8.01371 15.4616 8.40424 15.0711C8.79476 14.6805 8.79476 14.0474 8.40424 13.6569L2.74738 8L8.40424 2.34315C8.79476 1.95262 8.79476 1.31946 8.40424 0.928932C8.01371 0.538408 7.38055 0.538408 6.99002 0.928932L0.626062 7.29289ZM16.6665 7L1.33317 7V9H16.6665V7Z" 
+                  fill="white"
+                />
               </svg>
             </button>
           </div>
@@ -970,6 +985,42 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    AllFilterStateFalse() {
+      let count = 0;
+      for (let i = 0; i < this.programs.length; i++) {
+        if (this.programs[i].filtred == false)
+          count++;
+      }
+      if (count == this.programs.length) {
+        console.log(count, false);
+        this.allFiltred = false;
+      }
+      else if (count == 0) {
+        this.allFiltred = true;
+      } else {
+        this.allFiltred = false;
+      }
+    },
+    AllFilterState() {
+      const majority = !this.MajorityState();
+      for (let i = 0; i < this.programs.length; i++) {
+        this.programs[i].filtred = majority;
+      }
+      this.allFiltred = majority;
+    },
+    MajorityState() {
+      console.log(this.programs);
+      let count = 0;
+      for (let i = 0; i < this.programs.length; i++) {
+        if (this.programs[i].filtred == true)
+          count++;
+      }
+      if (count >= this.programs.length / 2)
+        return true;
+      return false;
+    },
   }
 };
 </script>
