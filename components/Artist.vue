@@ -10,7 +10,7 @@
 /> -->
 
 <template>
-  <div class="flex flex-col gap-6 h-[530px] w-[350px] bg-">
+  <div class="mx-auto flex flex-col gap-6 h-[530px] w-[350px]">
     <div class="relative">
       <img
         class="h-[350px] w-[350px]"
