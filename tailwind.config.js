@@ -15,6 +15,7 @@ module.exports = {
       'maximum-blue-green': '#2EC4B6',
       'alizarin-crimson': '#E71D36',
       'maastricht-blue': '#011627',
+      'yankees-blue': '#1A2D3D',
       'white': '#FFFFFF',
       'black': '#000000',
       'platinum': '#E7E7E7',

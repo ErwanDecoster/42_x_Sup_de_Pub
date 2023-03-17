@@ -4,8 +4,9 @@
 
 html {
   scroll-behavior: smooth;
-  @apply bg-maastricht-blue;
+  @apply bg-maastricht-blue text-maastricht-blue;
 }
+
 *::-webkit-scrollbar {
   height: 6px;
   width: 6px;

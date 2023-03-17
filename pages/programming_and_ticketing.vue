@@ -1,39 +1,61 @@
 <template>
   <div>
-    <section class="background w-full h-[95vh]">
+    <section class="background w-full px-6 h-[100vh]">
       <!-- <img
         class="h-2/5 absolute -right-20 -top-2 -rotate-90"
         src="@/src/halfcircle.svg"
         alt=""
       > -->
-      <div class="z-10 pt-[60vh] px-8 grid gap-6">
+      <div class="mx-auto max-w-screen-2xl z-10 pt-[60vh] grid gap-6">
         <p class="text-white">
           <NuxtLink
             to="/"
-            class="font-bold"
+            class="font-bold underline"
           >
             Acceuil
           </Nuxtlink> > Programmation & Billetterie
         </p>
-        <h1 class="uppercase text-8xl text-khaki font-bold w-3/4">
+        <h1 class="uppercase text-5xl lg:text-8xl text-khaki font-bold w-3/4">
           PROGRAMMATION & BILLETTERIE
         </h1>
-        <div class="flex gap gap-6 flex-wrap">
-          <div 
-            v-for="program in programs" 
-            :key="program"
-            class="border-2 border-alizarin-crimson text-2xl uppercase font-bold px-6 py-2 cursor-pointer"
-            :class="`${ program.filtred ? 'bg-transparent text-alizarin-crimson' : 'bg-alizarin-crimson text-white' }`"
-            @click="program.filtred = !program.filtred"
-          >
-            {{ program.name }}
-          </div>
-        </div>
+      </div>
+    </section>
+    <section class="px-6">
+      <div class="flex gap gap-6 flex-wrap py-16 mx-auto max-w-screen-2xl">
+        <button 
+          class="border-2 border-alizarin-crimson lg:text-2xl uppercase font-bold px-6 py-2 cursor-pointer"
+          :class="`${ allFiltred ? 'bg-alizarin-crimson text-white' : 'bg-transparent text-alizarin-crimson' }`"
+        >
+          Tout
+        </button>
+        <button 
+          v-for="program in programs" 
+          :key="program"
+          class="border-2 border-alizarin-crimson lg:text-2xl uppercase font-bold px-6 py-2 cursor-pointer"
+          :class="`${ program.filtred ? 'bg-transparent text-alizarin-crimson' : 'bg-alizarin-crimson text-white' }`"
+          @click="program.filtred = !program.filtred"
+        >
+          {{ program.name }}
+        </button>
       </div>
     </section>
     <section class="bg-maximum-blue-green py-12">
-      <div class="mx-auto max-w-screen-xl flex justify-between  px-6">
-        <button>Precedent</button>
+      <div class="mx-auto max-w-screen-2xl flex justify-between items-center px-6">
+        <button class="w-11 h-11 border-2 border-maastricht-blue rounded-full flex items-center justify-center relative">
+          <svg 
+            width="18" 
+            height="16" 
+            viewBox="0 0 18 16" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            class="scale-125"
+          >
+            <path 
+              d="M16.6665 9C17.2188 9 17.6665 8.55228 17.6665 8C17.6665 7.44772 17.2188 7 16.6665 7V9ZM0.626062 7.29289C0.235538 7.68342 0.235538 8.31658 0.626062 8.70711L6.99002 15.0711C7.38055 15.4616 8.01371 15.4616 8.40424 15.0711C8.79476 14.6805 8.79476 14.0474 8.40424 13.6569L2.74738 8L8.40424 2.34315C8.79476 1.95262 8.79476 1.31946 8.40424 0.928932C8.01371 0.538408 7.38055 0.538408 6.99002 0.928932L0.626062 7.29289ZM16.6665 7L1.33317 7V9H16.6665V7Z" 
+              fill="#011627"
+            />
+          </svg>
+        </button>
         <div class="grid grid-cols-5 gap-12 uppercase">
           <div class="space-y-1">
             <p class="text-xl">
@@ -91,102 +113,153 @@
             </p>
           </div>
         </div>
-        <button>Suivant</button>
+        <button class="w-11 h-11 border-2 border-maastricht-blue rounded-full flex items-center justify-center relative">
+          <svg 
+            width="18" 
+            height="16" 
+            viewBox="0 0 18 16" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            class="scale-125 rotate-180"
+          >
+            <path 
+              d="M16.6665 9C17.2188 9 17.6665 8.55228 17.6665 8C17.6665 7.44772 17.2188 7 16.6665 7V9ZM0.626062 7.29289C0.235538 7.68342 0.235538 8.31658 0.626062 8.70711L6.99002 15.0711C7.38055 15.4616 8.01371 15.4616 8.40424 15.0711C8.79476 14.6805 8.79476 14.0474 8.40424 13.6569L2.74738 8L8.40424 2.34315C8.79476 1.95262 8.79476 1.31946 8.40424 0.928932C8.01371 0.538408 7.38055 0.538408 6.99002 0.928932L0.626062 7.29289ZM16.6665 7L1.33317 7V9H16.6665V7Z" 
+              fill="#011627"
+            />
+          </svg>
+        </button>
       </div>
     </section>
-    <section class="pt-12">
+    <section class="">
       <div
         v-for="program in programs"
         :key="program"
-        class="py-4 space-y-16 mx-auto max-w-screen-xl relative"
+        class="py-4 pt-16 px-6 grid gap-16 mx-auto group relative odd:bg-yankees-blue"
+        :class="`${ program.filtred ? 'hidden' : 'block' }`"
       >
-        <h2 class="text-7xl text-khaki uppercase font-bold">
-          {{ program.name }}
-        </h2>
-        <div class="flex gap-12 overflow-x-scroll relative">
-          <div
-            v-for="show in program.shows"
-            :key="show"
-            class="grid gap-7 h-min"
-          >
-            <div class="relative w-80">
-              <img 
-                :src="`/${show.imgs[0].url}.jpeg`" 
-                alt=""
-                class="h-80 w-80 bg-black object-cover"
-              >
-              <div class="bg-maastricht-blue absolute bottom-0 left-0 h-24 w-24 rounded-tr-full text-white">
-                <p class="absolute bottom-3 left-3 text-3xl">
-                  {{ show.price }}€
-                </p>
-              </div>
-            </div>
-            <div class="flex justify-between">
-              <p class="text-xl font-bold text-white">
-                {{ show.author }}
-              </p>
-              <button class="button-secondary ">
-                Voir plus
-              </button>
-            </div>
-            <div class="relative z-10 h-36">
-              <button 
-                class="button-primary-two w-full hover:bg-maastricht-blue absolute"
-                @click="show.book = ! show.book" 
-              >
-                Réserver
-              </button>
-              <div 
-                v-if="show.book"
-                class="p-4 space-y-4 absolute bg-zomp right-0 left-0 top-0 pt-14 -z-10 rounded-3xl"
-              >
-                <select 
-                  id=""
-                  name="" 
-                  class="w-full z-30 border-2 border-maastricht-blue bg-maastricht-blue text-white rounded-full px-2 py-1 font-bold"
+        <div class="mx-auto max-w-screen-2xl grid gap-16 relative w-full">
+          <h2 class="text-7xl text-khaki uppercase font-bold">
+            {{ program.name }}
+          </h2>
+          <div class="flex gap-12 overflow-x-scroll relative snap-x">
+            <div
+              v-for="show in program.shows"
+              :key="show"
+              class="grid gap-7 h-min min-w-[320px] w-80 snap-start"
+            >
+              <div class="relative">
+                <img 
+                  :src="`/${show.imgs[0].url}.jpeg`" 
+                  alt=""
+                  class="h-80 w-80 bg-black object-cover"
                 >
-                  <option value="select">
-                    DATE
-                  </option>
-                  <option 
-                    v-for="date in show.dates"
-                    :key="date"
-                    :value="date.time"
-                  >
-                    {{ date.time }}
-                  </option>
-                </select>
-                <div class="flex justify-between">
+                <div class="bg-maastricht-blue group-odd:bg-yankees-blue absolute bottom-0 left-0 h-24 w-24 rounded-tr-full text-white">
+                  <p class="absolute bottom-3 left-3 text-3xl">
+                    {{ show.price }}€
+                  </p>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <p class="text-xl font-bold text-white shrink">
+                  {{ show.author }}
+                </p>
+                <button class="button-secondary w-36">
+                  Voir plus
+                </button>
+              </div>
+              <div class="relative z-10 h-44">
+                <button 
+                  class="button-primary-two w-full hover:bg-maastricht-blue group-odd:hover:bg-yankees-blue absolute"
+                  @click="show.book = ! show.book" 
+                >
+                  Réserver
+                </button>
+                <div 
+                  v-if="show.book"
+                  class="p-4 space-y-4 absolute bg-zomp right-0 left-0 top-0 pt-14 -z-10 rounded-3xl"
+                >
                   <select 
                     id=""
                     name="" 
-                    class="border-2 border-maastricht-blue bg-maastricht-blue text-white rounded-full px-2 py-1 font-bold"
+                    class="w-full z-30 border-2 border-maastricht-blue group-odd:border-yankees-blue bg-maastricht-blue group-odd:bg-yankees-blue text-white rounded-full px-2 py-1 font-bold"
                   >
-                    <option value="1">
-                      1
+                    <option value="select">
+                      DATE
                     </option>
-                    <option value="2">
-                      2
-                    </option>
-                    <option value="3">
-                      3
-                    </option>
-                    <option value="4">
-                      4
-                    </option>
-                    <option value="5">
-                      5
+                    <option 
+                      v-for="date in show.dates"
+                      :key="date"
+                      :value="date.time"
+                    >
+                      {{ date.time }}
                     </option>
                   </select>
-                  <button class="button-primary">
-                    Panier
-                  </button>
+                  <div class="flex justify-between">
+                    <select 
+                      id=""
+                      name="" 
+                      class="border-2 border-maastricht-blue group-odd:border-yankees-blue bg-maastricht-blue group-odd:bg-yankees-blue text-white rounded-full px-2 py-1 font-bold"
+                    >
+                      <option value="1">
+                        1
+                      </option>
+                      <option value="2">
+                        2
+                      </option>
+                      <option value="3">
+                        3
+                      </option>
+                      <option value="4">
+                        4
+                      </option>
+                      <option value="5">
+                        5
+                      </option>
+                    </select>
+                    <button class="button-primary">
+                      Panier
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          <div 
+            class="absolute mt-0 z-10 right-0 inset-y-0 h-full w-20 bg-gradient-to-r from-transparent to-maastricht-blue group-odd:to-yankees-blue" 
+            :class="`${ program.shows.length <= 4 ? '2xl:hidden' : 'block' }`"
+          />
+          <div class="flex gap-2 items-center absolute bottom-4 right-4 z-10">
+            <p class="text-white text-lg">
+              <b>1-{{ program.shows.length }}</b> 
+              sur 
+              <b>{{ program.shows.length }}</b>
+            </p>
+            <button class="w-11 h-11 border-2 border-white rounded-full flex items-center justify-center relative">
+              <svg 
+                width="18" 
+                height="16" 
+                viewBox="0 0 18 16" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                class="scale-125"
+              >
+                <path d="M16.6665 9C17.2188 9 17.6665 8.55228 17.6665 8C17.6665 7.44772 17.2188 7 16.6665 7V9ZM0.626062 7.29289C0.235538 7.68342 0.235538 8.31658 0.626062 8.70711L6.99002 15.0711C7.38055 15.4616 8.01371 15.4616 8.40424 15.0711C8.79476 14.6805 8.79476 14.0474 8.40424 13.6569L2.74738 8L8.40424 2.34315C8.79476 1.95262 8.79476 1.31946 8.40424 0.928932C8.01371 0.538408 7.38055 0.538408 6.99002 0.928932L0.626062 7.29289ZM16.6665 7L1.33317 7V9H16.6665V7Z" fill="white"/>
+              </svg>
+            </button>
+            <button class="w-11 h-11 border-2 border-white rounded-full flex items-center justify-center relative">
+              <svg 
+                width="18" 
+                height="16" 
+                viewBox="0 0 18 16" 
+                fill="none" 
+                xmlns="http://www.w3.org/2000/svg"
+                class="scale-125 rotate-180"
+              >
+                <path d="M16.6665 9C17.2188 9 17.6665 8.55228 17.6665 8C17.6665 7.44772 17.2188 7 16.6665 7V9ZM0.626062 7.29289C0.235538 7.68342 0.235538 8.31658 0.626062 8.70711L6.99002 15.0711C7.38055 15.4616 8.01371 15.4616 8.40424 15.0711C8.79476 14.6805 8.79476 14.0474 8.40424 13.6569L2.74738 8L8.40424 2.34315C8.79476 1.95262 8.79476 1.31946 8.40424 0.928932C8.01371 0.538408 7.38055 0.538408 6.99002 0.928932L0.626062 7.29289ZM16.6665 7L1.33317 7V9H16.6665V7Z" fill="white"/>
+              </svg>
+            </button>
+          </div>
         </div>
-        <div class="absolute z-10 right-0 inset-y-0 h-full w-20 bg-gradient-to-r from-transparent to-maastricht-blue" />
       </div>
     </section>
   </div>
@@ -196,6 +269,7 @@
 export default {
   data() {
     return {
+      allFiltred: false,
       programs: [
         {
           filtred: false,
