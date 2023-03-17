@@ -70,7 +70,7 @@
         alt=""
       >
     </section>
-    <section class="bg-[#1a2d3d] w-full p-20 md:flex md:flex-col md:justify-center md:items-center">
+    <section class="bg-[#1a2d3d] w-full p-5 md:flex md:flex-col md:justify-center md:items-center">
       <div class=" md:grid md:grid-cols-2 align-middle">
         <h2 class="text-white text-3xl mb-4 md:text-5xl md:col-span-1">
           DE NOMBREUX
@@ -97,10 +97,10 @@
         </div>
         <div class="snap-center my-6">
           <Artist
-            name="FLORENCE FORESTI"
-            img="florence.jpeg"
-            theme="HUMOUR"
-            days="16-17"
+            name="MICHEL POLNAREFF"
+            img="michel_polnareff.jpeg"
+            theme="MUSIQUE"
+            days="16-06"
             month="06"
             fontSize="22"
             description="Elle revient avec son nouveau seule-en-scène intitulé Boys..."

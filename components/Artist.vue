@@ -14,7 +14,7 @@
     <div class="relative">
       <img
         class="h-[350px] w-[350px]"
-        :src="'/_nuxt/src/' + img"
+        :src="'/_nuxt/public/' + img"
         alt=""
       >
       <svg
