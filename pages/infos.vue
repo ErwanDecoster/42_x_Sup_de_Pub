@@ -23,16 +23,6 @@
     <section class="flex mx-auto">
       <div class="flex flex-col max-w-screen-2xl mx-auto xl:gap-24 gap-8 xl:py-24 py-12">
         <div class="grid xl:grid-cols-5 w-full xl:gap-36 gap-6 p-6">
-          <div class="flex flex-col gap-6 xl:order-1 xl:col-span-2">
-            <img 
-              class="w-auto sm:max-w-xl "
-              src="@/src/image_4.png"
-              alt=""
-            >
-            <p class="text-white text-base font-normal italic">
-              Théâtre antique
-            </p>
-          </div>
           <div class="flex flex-col gap-12 xl:col-span-3">
             <div>
               <p class="text-white font-normal text-1xl lg:text-4xl md:text-3xl">
@@ -147,7 +137,7 @@
               <p class="text-white font-bold text-2xl md:text-4xl">
                 VENIR À PIED
               </p>
-              <p class="text-white text-base font-normal md:max-w-lg">
+              <p class="text-white text-base font-normal max-w-lg min-h-[195px]">
                 Trois itinéraires piétons s'offrent à vous pour rejoindre le festival : la montée du Gourguillon, la montée des Chazeaux 
                 depuis la rue du Boeuf et la montée Saint-Barthélemy depuis la gare Saint-Paul. <br> <br>
                 Gravir la colline à la force de ses muscles, c'est apprécier d'autant plus la vue une fois dans les gradins !
@@ -160,7 +150,7 @@
               <p class="text-white font-bold text-2xl md:text-4xl">
                 VENIR À VÉLO
               </p>
-              <p class="text-white text-base font-normal md:max-w-lg">
+              <p class="text-white text-base font-normal max-w-lg min-h-[195px]">
                 Avec le soutien de notre partenaire LPA, deux parkings à vélos sécurisés et gratuits sont installés pendant le festival, 
                 les soirs de spectacle. <br> > sur les quais de Saône, à Saint-Jean : un parking à vélos sécurisé situé sur la terrasse du 
                 Parking LPA Saint-Jean au niveau de la passerelle du Palais de Justice. <br> > à proximité des théâtres : un parking à vélos 
@@ -171,10 +161,10 @@
               v-if="deplacement == 'bus'"
               class="flex flex-col gap-6"
             >
-              <p class="text-white font-bold text-2xl md:text-4xl">
+              <p class="whitespace-nowrap text-white font-bold text-2xl md:text-4xl xs:max-w-none max-w-xs">
                 VENIR EN TRANSPORT EN COMMUN
               </p>
-              <p class="text-white text-base font-normal md:max-w-lg">
+              <p class="text-white text-base font-normal max-w-lg min-h-[195px]">
                 Le funiculaire, arrêt Minimes, théâtres romains. <br> Pour gravir la colline et accéder aux théâtres romains, la solution la plus 
                 simple est d'emprunter le funiculaire depuis la station Vieux Lyon, direction Saint- Just jusqu'à l'arrêt Minimes, situé 
                 face à l'entrée des théâtres. Durant la période du festival, son exploitation est renforcée et prolongée lorsque la programmation 
@@ -188,26 +178,26 @@
               <p class="text-white font-bold text-2xl md:text-4xl">
                 VENIR EN VOITURE
               </p>
-              <p class="text-white text-base font-normal md:max-w-lg">
+              <p class="text-white text-base font-normal max-w-lg min-h-[195px]">
                 L'accès en voiture et le stationnement aux abords des théâtres sont compliqués et très limités les soirs de spectacle. 
                 Pour venir aux Nuits l'esprit tranquille, il est conseillé d'utiliser les parkings relais TCL ou les parkings LPA. 
                 Pour un stationnement facilité, il est possible de réserver sa place via parking.lpa.fr.
               </p>
             </div>
           </div>
-        </div>
-        <div class="grid xl:grid-cols-5 w-full xl:gap-36 gap-6 p-6">
-          <div class="flex flex-col gap-6 xl:col-span-3">
+          <div class="flex flex-col gap-6 xl:col-span-2">
             <img 
-              class="w-auto lg:max-w-4xl"
-              src="@/src/image_5.png" 
+              class="w-auto sm:max-w-xl "
+              src="@/src/image_4.png"
               alt=""
             >
             <p class="text-white text-base font-normal italic">
-              Édition 2022 des Nuits de Fourvière
+              Théâtre antique
             </p>
           </div>
-          <div class="flex flex-col gap-12 xl:col-span-2">
+        </div>
+        <div class="grid xl:grid-cols-5 w-full xl:gap-36 gap-6 p-6">
+          <div class="flex flex-col xl:order-1 gap-12 xl:col-span-2">
             <div>
               <p class="text-white font-normal text-2xl md:text-4xl">
                 VENIR AUX NUITS
@@ -248,32 +238,42 @@
               </select>
               <p 
                 v-if="lieu == 'renaissance'"
-                class="text-white text-base font-medium"
+                class="text-white text-base font-medium min-h-[120px]"
               >
                 ADRESSE : 7 rue Orsel - 69600 Oullins <br> <br> TRANSPORT : <br> > Métro ligne B : Arrêt Gare d'Oullins
               </p>
               <p 
                 v-if="lieu == 'celestins'"
-                class="text-white text-base font-medium"
+                class="text-white text-base font-medium min-h-[120px]"
               >
                 ADRESSE : Place des Célestins, 69002 Lyon <br> <br> TRANSPORTS : <br> > Métro ligne A et D : Arrêt Bellecour <br> > Bus C3, C5, C9, C10, C12, C13, C20
               </p>
               <p 
                 v-if="lieu == 'croix-rousse'"
-                class="text-white text-base font-medium"
+                class="text-white text-base font-medium min-h-[120px]"
               >
                 ADRESSE : Place Joannès Ambre - 69004 Lyon <br> <br> TRANSPORT : <br> > Métro ligne C, Arrêt Croix-Rousse ou Hénon <br> > Bus C13, 38, 33 : Arrêt Hôpital de la Croix-Rousse
               </p>
               <p 
                 v-if="lieu == 'lyon'"
-                class="text-white text-base font-medium"
+                class="text-white text-base font-medium min-h-[120px]"
               >
                 ADRESSE : Place de la Comédie - 69001 Lyon <br> <br> TRANSPORT : <br> > Métro ligne A et C : Arrêt Hôtel de Ville - Louis Pradel <br> > Bus C3, C5, C13, C14, C18, 9, 19, S1, S6, S12, 132, 171
               </p>
             </div>
           </div>
+          <div class="flex flex-col gap-6 xl:col-span-3">
+            <img 
+              class="w-auto lg:max-w-4xl"
+              src="@/src/image_5.png" 
+              alt=""
+            >
+            <p class="text-white text-base font-normal italic">
+              Édition 2022 des Nuits de Fourvière
+            </p>
+          </div>
         </div>
-        <div class="flex w-full flex-col gap-8 p-6">
+        <div class="flex w-full flex-col gap-8 lg:gap-14 p-6">
           <p class="text-khaki text-5xl font-bold">
             RESTAURATION
           </p>
