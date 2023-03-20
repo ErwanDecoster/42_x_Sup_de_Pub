@@ -72,19 +72,21 @@
     </section>
     <section class="bg-[#1a2d3d]  w-full p-5 md:p-[8.25rem] md:flex md:flex-col md:justify-center md:items-center">
       <div class="max-w-screen-2xl">
-        <div class="md:grid md:grid-cols-3 md:gap-4 md:items-center md:justify-center md:mx-8">
-          <h2 class="text-white text-3xl mb-4 md:text-5xl md:mb-auto">
-            DE NOMBREUX
-            <span class="text-khaki text-5xl relative -left-1 font-bold -top-4 md:text-7xl md:-top-6">ARTISTES</span>
-          </h2>
-          <p class="text-white mb-5 md:w-2/3">
-            Depuis plus de 75 ans, le festival produit et crée des spectacles originaux et audacieux...
-          </p>
+        <div class="md:flex md:gap-4 md:items-center md:justify-center md:mx-8">
+          <div>
+            <h2 class="text-white text-3xl mb-4 md:text-5xl md:mb-auto">
+              DE NOMBREUX
+              <span class="text-khaki text-5xl relative -left-1 font-bold -top-4 md:text-7xl md:-top-6">ARTISTES</span>
+            </h2>
+            <p class="text-white mb-5 md:w-2/3">
+              Depuis plus de 75 ans, le festival produit et crée des spectacles originaux et audacieux...
+            </p>
+          </div>
           <NuxtLink class="md:justify-self-end md:button-primary button-primary-two">
             TOUTE LA PROGRAMMATION
           </NuxtLink>
         </div>
-        <div class="py-10 flex flex-row gap-6 overflow-x-auto overflow-y-auto snap-mandatory snap-x md:w-full md:grid md:grid-cols-4 md:gap-0">
+        <div class="py-10 flex flex-row gap-6 overflow-x-auto overflow-y-auto snap-mandatory snap-x md:justify-center md:w-full md:flex md:flex-row md:gap-5">
           <div class="snap-center my-6 ">
             <Artist
               name="FLORENCE FORESTI"
